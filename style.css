@@ -1,0 +1,380 @@
+@font-face {
+    font-family: Bahnschrift;
+    src: url("fonts/Bahnschrift.ttf");
+}
+
+@font-face {
+    font-family: Porsche;
+    src: url("fonts/ofont.ru_Porsche.ttf");
+}
+
+@font-face {
+    font-family: Yanone;
+    src: url("fonts/YanoneKaffeesatz-Light.ttf");
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar-track {
+    background: #252424;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 5px;
+  }
+
+.hidden{
+    opacity:0 ;
+    filter:blur(1px);
+    transform:translateY(50px);
+    -ms-filter: blur(1px);
+    transition: 1s linear !important;
+}
+
+.show{
+    transform:translateY(0px);
+    opacity: 1 !important;
+    filter:blur(0px);
+    -ms-filter: blur(0px);
+}
+#up_button{
+    background-color: rgb(0, 0, 0);
+    border: none;
+    position:fixed;
+    right:50px;
+    bottom:25px;
+    
+}
+*{
+    font-family: 'Yanone';
+    font-size: 20px;
+}
+body{
+    margin:0px;
+    background-color: rgb(0, 0, 0);
+}
+.pages_bar{
+    display: flex;
+
+    font-size: 20px;
+
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+
+    justify-content: space-between;
+    align-items: center;
+}
+#preloader{
+    width:100vw;
+    height:100%;
+    background: black url("images/loading.gif") center center no-repeat;
+    background-size: 100px;
+    position: fixed;
+    z-index: 100;
+}
+.banner{
+    z-index: 1;
+    background-image: url("images/main_background.png");
+    width:100%;
+    min-height: 550px;
+
+    background-size:cover;
+    background-repeat: no-repeat;
+
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+    from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: -webkit-gradient(linear, left top, left bottom, 
+    from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+.link_container{
+    text-align: center;
+    line-height: 62px;
+
+    min-width: 150px;
+    height: 62px;
+
+    background-color: black;
+
+    margin-right: 5%;
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    transition-property: background-color;
+    /* transition-duration: 0.5s; */
+    transition-timing-function: linear;
+}
+.current_page{
+    background-color: #191F23 !important;
+}
+
+
+
+
+
+#links{
+    display: flex;
+    justify-content: space-between;
+}
+.link_container:hover{
+    background-color: #0C0F11;
+}
+a{
+    /* min-width: 60px; */
+    text-decoration: none;
+    color:white;
+}
+a:visited{
+    color:white;
+}
+.sub_menus{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    
+    
+}
+.sub_menu{
+    position: absolute;
+    z-index: 3;
+
+    width: 200px;
+    line-height: 50px;
+
+    background-color: #0c0f11c2;
+    visibility: hidden;
+
+    border-radius: 0 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+
+    padding-left: 2%;
+    font-size:20px;
+
+    box-sizing: border-box;
+
+    box-shadow: #191F23 5px 5px 7px;
+
+    overflow: hidden;
+}
+.sub_menu >*{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.sub_menu a:hover{
+    color: #e2d5c9;
+}
+
+
+.upH {
+    color:white;
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 15%;
+}
+.HH {
+    font-family: Porsche;
+    font-size: 90px;
+    color:white;
+    margin-bottom: 15%;
+}
+.banner_content{
+    display: block;
+    position: absolute !important; 
+
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    bottom: 70%;
+
+    top: 62px;
+}
+#bottom_sub_menu{
+    background-color: #191F23;
+    height: 60px;
+
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+}
+#contacts img{
+    margin-left:10px;
+    margin-right:20px;
+
+}
+#contacts{
+    display: flex;
+    align-items: center;
+}
+.anchors {
+    width:max-content;
+    /* height: 100%; */
+
+    justify-items: center;
+    display: flex;
+
+    vertical-align: middle;
+    justify-content: left;
+    align-items: center;
+
+    height: 60px;
+}
+
+.anchors a{
+    text-decoration: none;
+    color:white;
+
+    font-size: 20px;
+    text-align: center;
+
+    width: 150px;
+
+    height: 60px;
+    line-height: 60px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.anchors a:hover{
+    background-color: #262F36;
+    border-bottom: solid 1px white;
+}
+
+main{
+    margin-top: 50px;
+}
+
+h3{
+    color:white;
+    font-size: 40px;
+}
+p{
+    color:white;
+    font-size:20px;
+}
+#login_title{
+    
+    text-align: center;
+    width:100%;
+    font-size: 40px !important;
+}
+
+#login_window{
+    position: fixed;
+    width:100vw;
+    height:100vh;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    background-color: rgba(0,0,0,0.5);
+}
+#login_box{
+    width:40%;
+    height:40%;
+    display: flex;
+    flex-direction: column;
+    background-color: #07090A;
+    border-radius:30px;
+}
+
+#login_form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    
+    
+}
+#login_form input{
+    width: 50%;
+    color:white;
+    margin-bottom: 20px;
+    background-color: #191F23;
+    min-height:50px;
+    font-size:20px;
+    border-radius: 30px;
+    border: none;
+}
+
+#login_button{
+    width: 50%;
+    font-size:20px;
+    color:white;
+    border:solid white 2px;
+    background-color: #191F23;
+    border-radius: 30px;
+    border-spacing: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition:0.25s linear;
+    text-align: center;
+}
+
+#login_button:hover{
+    border-color:#7C4D2D;
+    background-color: #7C4D2D;
+}
+
+#sign_up_button{
+    width: 50%;
+    font-size:20px;
+    margin-bottom: 20px;
+    background-color: #191F23;
+    color:white;
+    border:solid white 2px;
+    border-radius: 30px;
+    border-spacing: 10px;
+    padding: 10px;
+    transition:0.25s linear;
+    text-align: center;
+}
+
+#sign_up_button:hover{
+    border-color:#7C4D2D;
+    background-color: #7C4D2D;
+}
+#login_cancel{
+    width: 50%;
+    font-size:20px;
+    margin-bottom: 20px;
+    background-color: #191F23;
+    color:white;
+    border:solid white 2px;
+    border-radius: 30px;
+    border-spacing: 10px;
+    padding: 10px;
+    transition:0.25s linear;
+    text-align: center;
+}
+#login_cancel:hover{
+    border-color:#7C4D2D;
+    background-color: #7C4D2D;
+}
+
+#button_container{
+    display: flex;
+    width:50%;
+    justify-content: space-between;
+}
+
+button {
+    border-radius: 30px;
+    border: 0;
+}
